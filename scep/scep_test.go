@@ -245,8 +245,8 @@ func createCaCertWithKeyUsage(t *testing.T, keyUsage x509.KeyUsage) (*x509.Certi
 	}
 	caCert := depot.NewCACert(
 		depot.WithCountry("US"),
-		depot.WithOrganization("MICROMDM"),
-		depot.WithCommonName("MICROMDM SCEP CA"),
+		depot.WithOrganization("Punon"),
+		depot.WithCommonName("Punon SCEP CA"),
 		depot.WithKeyUsage(keyUsage),
 	)
 	crtBytes, err := caCert.SelfSign(rand.Reader, &key.PublicKey, key)
